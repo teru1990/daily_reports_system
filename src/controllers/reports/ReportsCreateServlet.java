@@ -50,7 +50,7 @@ public class ReportsCreateServlet extends HttpServlet {
                 report_date = Date.valueOf(request.getParameter("report_date"));
             }
             r.setReport_date(report_date);
-            r.setTitle("title");
+            r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
